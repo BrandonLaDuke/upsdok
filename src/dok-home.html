@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+
+<dom-module id="dok-home">
+  <template>
+    <link rel="stylesheet" type="text/css" href="../css/buttons.css">
+    <style>
+      :host {
+        display: flex;
+        background-color: var(--app-primary-color);
+        height: calc(100vh - 64px);
+      }
+      .start {
+        width: auto;
+        margin: auto;
+      }
+      .start h1 {
+        margin: 0;
+        font-size: 3em;
+        text-align: center;
+        color: var(--app-secondary-color);
+        letter-spacing: 1px;
+      }
+      .start h2 {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 100;
+        color: var(--text-color-invert);
+        letter-spacing: 1px;
+      }
+    </style>
+
+    <div class="start">
+      <h1>DOK<sup>s</sup></h1>
+      <h2>Test Your Depth of Knowledge</h2>
+      <a class="btn btn-start" href="#">Learn</a>
+      <a class="btn btn-start" href="#">Practice</a>
+    </div>
+  </template>
+
+  <script>
+    class DokHome extends Polymer.Element {
+      static get is() { return 'dok-home'; }
+    }
+
+    window.customElements.define(DokHome.is, DokHome);
+  </script>
+</dom-module>

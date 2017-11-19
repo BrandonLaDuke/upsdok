@@ -1,0 +1,15 @@
+.btn {
+  display: block;
+  padding: 20px;
+  width: 250px;
+  margin: 1em auto 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-start {
+  border: 2px solid var(--app-secondary-color);
+  color: var(--app-secondary-color);
+  font-size: 1.3em;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
