@@ -1,0 +1,50 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="dok-learn-lifting-lowering">
+  <template>
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="/css/shared-styles.css">
+    <style>
+    :host {
+      display: flex;
+      background-color: var(--app-primary-color);
+      height: calc(100vh - 64px);
+    }
+    .lesson {
+      width: auto;
+      margin: auto;
+    }
+    .lesson h1 {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 100;
+      color: var(--app-secondary-color);
+      letter-spacing: 1px;
+    }
+    </style>
+
+    <div class="lesson">
+      <h1>8 Keys to Lifting & Lowering</h1>
+      <div class="card">
+        <ol>
+          <li><em>Get close</em> to package.</li>
+          <li><em>Position feet</em> sholder width apart.</li>
+          <li>Bend at the <em>knees</em>.</li>
+          <li><em>Test the weight</em> of the package</li>
+          <li>Grab the package at <em>opisite, diginal corners</em>.</li>
+          <li>Lift with a <em>smooth and stedy</em> motion.</li>
+          <li><em>Piviot</em> feet, don't twist.</li>
+          <li>Use <em>existing equipment</em>.</li>
+        </ol>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    class DokLearnLiftingLowering extends Polymer.Element {
+      static get is() { return 'dok-learn-lifting-lowering'; }
+    }
+
+    window.customElements.define(DokLearnLiftingLowering.is, DokLearnLiftingLowering);
+  </script>
+</dom-module>

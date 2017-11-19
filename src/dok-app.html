@@ -13,9 +13,10 @@
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="dok-home.html">
-<link rel="lazy-import" href="my-view2.html">
-<link rel="lazy-import" href="my-view3.html">
-<link rel="lazy-import" href="my-view404.html">
+<link rel="lazy-import" href="dok-learn.html">
+<link rel="lazy-import" href="dok-practice.html">
+<link rel="lazy-import" href="dok-test.html">
+<link rel="lazy-import" href="dok-view404.html">
 
 <dom-module id="dok-app">
   <template>
@@ -23,6 +24,7 @@
       :host {
         --app-primary-color: #351c15;
         --app-secondary-color: #f8be11;
+        --app-secondary-color-hover: rgba(248, 190, 17, 0.2);
         --text-color: #000000;
         --text-color-invert: #ffffff;
 
@@ -87,8 +89,9 @@
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="[[rootPath]]home">Home</a>
-          <a name="view2" href="[[rootPath]]view2">View Two</a>
-          <a name="view3" href="[[rootPath]]view3">View Three</a>
+          <a name="learn" href="[[rootPath]]learn">Learn</a>
+          <a name="practice" href="[[rootPath]]practice">Practice</a>
+          <a name="test" href="[[rootPath]]test">Test</a>
         </iron-selector>
         <div class="footer">
           <p>Developed by<br><a href="http://brandonladuke.com">Brandon LaDuke</a></p>
@@ -111,9 +114,11 @@
             fallback-selection="view404"
             role="main">
           <dok-home name="home"></dok-home>
-          <my-view2 name="view2"></my-view2>
-          <my-view3 name="view3"></my-view3>
-          <my-view404 name="view404"></my-view404>
+          <dok-learn name="learn"></dok-learn>
+          <dok-practice name="practice"></dok-practice>
+          <dok-test name="test"></dok-test>
+          <dok-learn-lifting-lowering name="learn-lifting-lowering"></dok-learn-lifting-lowering>
+          <dok-view404 name="view404"></dok-view404>
         </iron-pages>
       </app-header-layout>
     </app-drawer-layout>

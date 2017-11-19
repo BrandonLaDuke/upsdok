@@ -1,0 +1,26 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="dok-practice">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">3</div>
+      <h1>View Three</h1>
+      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
+      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+    </div>
+  </template>
+
+  <script>
+    class DokPractice extends Polymer.Element {
+      static get is() { return 'dok-practice'; }
+    }
+
+    window.customElements.define(DokPractice.is, DokPractice);
+  </script>
+</dom-module>

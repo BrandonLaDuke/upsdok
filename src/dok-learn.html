@@ -1,0 +1,44 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<link rel="lazy-import" href="dok-learn-lifting-lowering.html">
+
+<dom-module id="dok-learn">
+  <template>
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="/css/shared-styles.css">
+    <style>
+    :host {
+      display: flex;
+      background-color: var(--app-primary-color);
+      height: calc(100vh - 64px);
+    }
+    .start {
+      width: auto;
+      margin: auto;
+    }
+    .start h2 {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 100;
+      color: var(--text-color-invert);
+      letter-spacing: 1px;
+    }
+    </style>
+
+    <div class="start">
+      <h2>Choose a unit to learn about</h2>
+      <a class="btn btn-learn" href="#">General DOKs</a>
+      <a class="btn btn-learn" href="/learn-lifting-lowering">8 Keys to Lifting and Lowering</a>
+      <a class="btn btn-learn" href="#">5 Keys to Preventing Slips and Falls</a>
+      <a class="btn btn-learn" href="#">Yard Control Rules</a>
+    </div>
+  </template>
+
+  <script>
+    class DokLearn extends Polymer.Element {
+      static get is() { return 'dok-learn'; }
+    }
+
+    window.customElements.define(DokLearn.is, DokLearn);
+  </script>
+</dom-module>
