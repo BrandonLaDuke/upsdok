@@ -2,15 +2,43 @@
 
 <dom-module id="dok-view404">
   <template>
+    <link rel="stylesheet" href="/css/buttons.css">
     <style>
       :host {
-        display: block;
-
-        padding: 10px 20px;
+        display: flex;
+        background-color: var(--app-primary-color);
+        min-height: calc(100vh - 64px);
+      }
+      .start {
+        width: auto;
+        margin: auto;
+      }
+      .start h1 {
+        margin: 0;
+        font-size: 3em;
+        text-align: center;
+        color: var(--app-secondary-color);
+        letter-spacing: 1px;
+      }
+      .start h2 {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 100;
+        color: var(--text-color-invert);
+        letter-spacing: 1px;
+      }
+      #fourofour {
+        font-family: monospace;
+        font-size: 8em;
       }
     </style>
 
-    Oops you hit a 404. <a href="[[rootPath]]">Head back to home.</a>
+    <div class="start">
+      <h1>DOK<sup>s</sup></h1>
+      <h1 id="fourofour">404</h1>
+      <h2>Oops, you wondered off into unknown territory.</h2>
+      <a class="btn btn-start" href="[[rootPath]]">Head back home.</a>
+    </div>
   </template>
 
   <script>
