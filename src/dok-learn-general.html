@@ -26,20 +26,40 @@
     <div class="lesson">
       <h1>General DOKs</h1>
       <div class="card">
-        <h2>Has the emergency exactuation alarm been diminstrated in the past six months?</h2>
-        <h3>Yes. The last Thursday of every month.</h3>
+        <h2>When do you secure a conveyor?</h2>
+        <h3>Anytime you need to get on a belt. (Break a jam, move a non-powered diverter or walk-off).</h3>
       </div>
       <div class="card">
-        <h2>Has the emergency exactuation alarm been diminstrated in the past six months?</h2>
-        <h3>Yes. The last Thursday of every month.</h3>
+        <h2>How do you properly secure a conveyor?</h2>
+        <h3>Push the red stop button and place the secure latch over the stop button.</h3>
       </div>
       <div class="card">
-        <h2>Has the emergency exactuation alarm been diminstrated in the past six months?</h2>
-        <h3>Yes. The last Thursday of every month.</h3>
+        <h2>Once a belt has been secured, who can unsecure it?</h2>
+        <h3>Only the person who secured it and gets on the belt.</h3>
       </div>
       <div class="card">
-        <h2>Has the emergency exactuation alarm been diminstrated in the past six months?</h2>
-        <h3>Yes. The last Thursday of every month.</h3>
+        <h2>When can you lock-out equipment?</h2>
+        <h3>Never. I'm not certified to lock-out equipment.</h3>
+      </div>
+      <div class="card">
+        <h2>Where do you go in the event of a tornado, hurricane, or earthquake and how are you notified?</h2>
+        <h3>Bathroom or under the un-load. By word of mouth.</h3>
+      </div>
+      <div class="card">
+        <h2>What do you do if a package is generating smoke, fumes, or is otherwise irritating?</h2>
+        <h3>Don't touch, leave the area, and notify supervisor.</h3>
+      </div>
+      <div class="card">
+        <h2>What would you do if a package is leaking and it carries no label or other indication of its contents?</h2>
+        <h3>Treat it as a hazmat. Don't touch, leave the area, and notify supervisor.</h3>
+      </div>
+      <div class="card">
+        <h2>Has the emergency evacuation alarm been demonstrated in the past 12 months?</h2>
+        <h3>Yes. The last Thursday of the month.</h3>
+      </div>
+      <div class="card">
+        <h2>In an emergency evacuation, where do you exit, assemble, and where is the Emergency Evacuation Plan posted for your work area?</h2>
+        <h3>{{assemblyArea}}. {{planPosted}}</h3>
       </div>
     </div>
   </template>
@@ -47,6 +67,18 @@
   <script>
     class DokLearnGeneral extends Polymer.Element {
       static get is() { return 'dok-learn-general'; }
+      static get properties() {
+        return {
+          assemblyArea: {
+            type: String,
+            value: "Pineapple"
+          },
+          planPosted: {
+            type: String,
+            value: "Between chutes 26 and 27"
+          }
+        };
+      }
     }
 
     window.customElements.define(DokLearnGeneral.is, DokLearnGeneral);
